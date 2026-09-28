@@ -1,0 +1,333 @@
+/* Paleta de Cores Baseada na Identidade Y2K Enviada */
+:root {
+  --cyber-black: #1a1b1e;
+  --cyber-dark-gray: #2b2c30;
+  --cyber-magenta: #ec008c;
+  --cyber-purple-light: #dfa2f2;
+  --cyber-lilac-pastel: #e1d4e8;
+  --text-white: #ffffff;
+  --text-gray: #b2b3b8;
+  --border-stroke: 3px solid #1a1b1e;
+  --box-shadow-retro: 5px 5px 0px #1a1b1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace, sans-serif;
+  font-weight: bold;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cyber-dark-gray);
+  color: var(--cyber-lilac-pastel);
+  padding-top: 90px;
+}
+
+/* Detalhes de Estilo Retro */
+.top-cyber-bar {
+  height: 10px;
+  background: linear-gradient(
+    90deg,
+    var(--cyber-magenta) 0%,
+    var(--cyber-purple-light) 50%,
+    var(--cyber-black) 100%
+  );
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.header {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  padding: 15px 5%;
+  background-color: var(--cyber-black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--cyber-magenta);
+  z-index: 1000;
+}
+
+.logo {
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.logo span {
+  color: var(--cyber-magenta);
+}
+.nav-menu a {
+  color: var(--text-white);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+.nav-menu a:hover {
+  color: var(--cyber-purple-light);
+  text-decoration: underline;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Janelas de Estilo Sistema Operacional Antigo (Windows 98 / Y2K) */
+.cyber-window {
+  background-color: var(--text-white);
+  border: var(--border-stroke);
+  box-shadow: var(--box-shadow-retro);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.window-header {
+  background-color: var(--cyber-black);
+  color: var(--text-white);
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: var(--border-stroke);
+}
+
+.window-header .dot {
+  width: 100%;
+  max-width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--cyber-magenta);
+  display: inline-block;
+}
+
+.window-title {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-left: 5px;
+}
+.window-content {
+  padding: 30px;
+}
+
+/* Tags e Badges */
+.badge-y2k {
+  background-color: var(--cyber-magenta);
+  color: white;
+  padding: 4px 10px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.retro-title {
+  font-size: 28px;
+  background-color: var(--cyber-black);
+  color: var(--cyber-purple-light);
+  padding: 10px 20px;
+  width: fit-content;
+  border: var(--border-stroke);
+  box-shadow: 4px 4px 0 var(--cyber-magenta);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--cyber-black);
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Seções e Grids */
+section {
+  padding: 60px 10%;
+}
+.grid-two-columns,
+.grid-three-columns {
+  display: grid;
+  gap: 25px;
+}
+.grid-two-columns {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-three-columns {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.retro-card,
+.skill-pill-box {
+  background-color: var(--cyber-dark-gray);
+  color: var(--text-white);
+  padding: 25px;
+  border: var(--border-stroke);
+  box-shadow: var(--box-shadow-retro);
+}
+.retro-card h3,
+.skill-pill-box h3 {
+  color: var(--cyber-purple-light);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.retro-card p,
+.skill-pill-box p {
+  color: var(--text-gray);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Layout da área dos Projetos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+.project-card {
+  background: var(--text-white);
+  border: var(--border-stroke);
+  box-shadow: 7px 7px 0 var(--cyber-black);
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.media-container {
+  background-color: var(--cyber-black);
+  border-right: var(--border-stroke);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.media-placeholder {
+  color: var(--cyber-purple-light);
+  font-size: 12px;
+  padding: 20px;
+  text-align: center;
+}
+.project-body {
+  padding: 30px;
+}
+.tag-system {
+  font-size: 11px;
+  padding: 3px 8px;
+  border: 2px solid var(--cyber-black);
+  background-color: var(--cyber-purple-light);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.video-container-embed {
+  background: #f0f0f5;
+  border: 2px dashed var(--cyber-black);
+  margin: 15px 0;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botões Retro Estilizados */
+.action-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+.btn-retro-sm {
+  text-decoration: none;
+  color: var(--text-white);
+  background-color: var(--cyber-black);
+  padding: 8px 12px;
+  font-size: 12px;
+  border: 2px solid var(--cyber-magenta);
+  transition: all 0.2s;
+}
+.btn-retro-sm:hover {
+  background-color: var(--cyber-magenta);
+  transform: translate(-2px, -2px);
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag-y2k-item {
+  background: var(--cyber-black);
+  color: var(--text-white);
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.terminal-text {
+  background: var(--cyber-black);
+  color: #00ff00;
+  padding: 25px;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.max-width-window {
+  max-width: 750px;
+}
+.text-center {
+  text-align: center;
+}
+.font-magenta .window-title {
+  color: var(--cyber-magenta);
+}
+
+.footer {
+  text-align: center;
+  padding: 40px;
+  background-color: var(--cyber-black);
+  color: var(--text-gray);
+  font-size: 11px;
+  border-top: 4px solid var(--cyber-magenta);
+}
+
+/* Adaptação Responsiva */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--cyber-black);
+    flex-direction: column;
+    padding: 20px;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .nav-menu a {
+    margin: 10px 0;
+    margin-left: 0;
+    display: block;
+  }
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+  .grid-two-columns {
+    grid-template-columns: 1fr;
+  }
+  section {
+    padding: 40px 5%;
+  }
+}
